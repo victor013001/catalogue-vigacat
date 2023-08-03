@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: catalogue-vigacat
+  profiles:
+    active: local
+
+server:
+  port: 8082
+  servlet:
+    context-path: /catalogue
+
+logging:
+  level:
+    root: info
+
+
+security:
+  url: http://localhost:8081
+
+app:
+  name: Catalogue

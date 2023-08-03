@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/catalogue_vigacat
+    username: vigacat_admin
+    password: v1g4c4t
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+
+flyway:
+  url: jdbc:postgresql://localhost:5432/catalogue_vigacat
+  schemas: public
+  user: "vigacat_admin"
+  password: "v1g4c4t"
