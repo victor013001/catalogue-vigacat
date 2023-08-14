@@ -5,7 +5,7 @@ INSERT INTO publisher (name)
     VALUES ('Sony Computer Entertainment');
 
 INSERT INTO game (name, release_date, esrb, created_at, created_by)
-VALUES ('The Last of Us', '2013-06-14', 'M - Mature', NOW(), 'SYSTEM');
+VALUES ('The Last of Us', '2013-06-14', 'M', NOW(), 'SYSTEM');
 
 INSERT INTO genre (name)
 VALUES ('Action-Adventure'),

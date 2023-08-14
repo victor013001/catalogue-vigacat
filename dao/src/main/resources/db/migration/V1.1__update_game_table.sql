@@ -1,40 +1,40 @@
 CREATE TYPE esrb_type AS ENUM (
-    'EC - Early Childhood',
-    'E - Everyone',
-    'E10+ - Everyone 10 and Older',
-    'T - Teen',
-    'M - Mature',
-    'AO - Adults Only',
-    'RP - Rating Pending'
+    'EC',
+    'E',
+    'E10',
+    'T',
+    'M',
+    'AO',
+    'RP'
     );
 
 ALTER TABLE game
     DROP COLUMN developer,
-    ADD COLUMN esrb       esrb_type   NOT NULL,
-    ADD COLUMN created_at TIMESTAMP   NOT NULL,
-    ADD COLUMN created_by varchar(32) NOT NULL,
+    ADD COLUMN esrb esrb_type NOT NULL,
+    ADD COLUMN created_at TIMESTAMP NOT NULL,
+    ADD COLUMN created_by varchar (32) NOT NULL,
     ADD COLUMN updated_at TIMESTAMP,
-    ADD COLUMN updated_by varchar(32),
+    ADD COLUMN updated_by varchar (32),
     ADD CONSTRAINT game_UN UNIQUE (name, release_date);
 
 
 CREATE TABLE developer
 (
-    id   BIGSERIAL   NOT NULL,
+    id BIGSERIAL NOT NULL,
     name varchar(64) NOT NULL,
     PRIMARY KEY (id)
 );
 
 CREATE TABLE publisher
 (
-    id   BIGSERIAL   NOT NULL,
+    id BIGSERIAL NOT NULL,
     name varchar(64) NOT NULL,
     PRIMARY KEY (id)
 );
 
 CREATE TABLE genre
 (
-    id   BIGSERIAL   NOT NULL,
+    id BIGSERIAL NOT NULL,
     name varchar(64) NOT NULL,
     PRIMARY KEY (id)
 );
