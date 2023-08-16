@@ -32,19 +32,19 @@ public class Game extends AuditedEntity {
     @Enumerated(EnumType.STRING)
     private EsrbType esrb;
 
-    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(name = "game_developer",
             joinColumns = @JoinColumn(name = "game_id", referencedColumnName = "id"),
             inverseJoinColumns = @JoinColumn(name = "developer_id", referencedColumnName = "id"))
     private List<Developer> developers;
 
-    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(name = "game_publisher",
             joinColumns = @JoinColumn(name = "game_id", referencedColumnName = "id"),
             inverseJoinColumns = @JoinColumn(name = "publisher_id", referencedColumnName = "id"))
     private List<Publisher> publishers;
 
-    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(name = "game_genre",
             joinColumns = @JoinColumn(name = "game_id", referencedColumnName = "id"),
             inverseJoinColumns = @JoinColumn(name = "genre_id", referencedColumnName = "id"))

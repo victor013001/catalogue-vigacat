@@ -18,15 +18,15 @@ public class PublisherPersistenceImpl implements PublisherPersistence {
         publisherRepository.save(buildPublisher(publisher));
     }
 
-    private Publisher buildPublisher(String publisher) {
-        return Publisher.builder()
-                .publisher(publisher)
-                .build();
-    }
-
     @Override
     @Transactional(readOnly = true)
     public boolean existPublisher(String publisher) {
         return publisherRepository.existsByPublisherIgnoreCase(publisher);
+    }
+
+    private Publisher buildPublisher(String publisher) {
+        return Publisher.builder()
+                .publisher(publisher)
+                .build();
     }
 }

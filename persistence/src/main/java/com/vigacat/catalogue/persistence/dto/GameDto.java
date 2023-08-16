@@ -15,6 +15,7 @@ import java.util.List;
 @AllArgsConstructor
 public class GameDto {
 
+    private Long id;
     private String title;
     private LocalDate releaseDate;
     private EsrbType esrb;
