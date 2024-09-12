@@ -1,7 +1,7 @@
 
 # Catalogue Vigacat
 
-Catalogue Vigacat is a service designed for managing a video game catalogue, built with Java and Spring Boot. This project was created to practice and improve skills.
+Catalogue Vigacat is a microservice designed for managing a video game catalogue, built with Java and Spring Boot. This project was created to practice and improve skills.
 
 ## Technologies
 
