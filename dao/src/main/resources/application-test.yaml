@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    driverClassName: org.h2.Driver
+    url: jdbc:h2:mem:cataloguevigacat;MODE=PostgreSQL
+    username: vigacat_admin
+    password: v1g4c4t
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    database-platform: org.hibernate.dialect.H2Dialect
+  flyway:
+    locations: classpath:db/migration/h2
+
+
+flyway:
+  url: jdbc:h2:mem:cataloguevigacat
+  schemas: public
+  user: vigacat_admin
+  password: v1g4c4t

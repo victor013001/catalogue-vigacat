@@ -18,5 +18,6 @@ import org.springframework.context.annotation.Import;
 public class VigacatApplication {
     public static void main(String... args) {
         SpringApplication.run(VigacatApplication.class, args);
+
     }
 }
